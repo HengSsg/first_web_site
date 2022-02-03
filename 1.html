@@ -3,65 +3,92 @@
 <head>
     <title>WEB.HENGSGG-html</title>
     <meta charset= "utf-8">
-    <style>
-        a{
-            text-decoration: none;
-            color: black;
-    
-        }
-        h1{           
-            font-size: 300%;
-            text-align: center; 
-            border-bottom: 2px solid black;
-            padding: 0px;
-            margin: auto;    
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function nightday(hi){
+            var target =document.querySelector('body');
             
-        }
-        h2{
-            margin: 0;
-        }
-        ol{
-            border-right: 2px solid black;
-            margin: 0;
-            width: 100px;
-            padding: 10px;
-            margin-left: 5px;
-        }
-        .now{
-            color: red;
-        }
+            if(hi.value === 'night'){
+                target.style.backgroundColor = 'black'; 
+                target.style.color = 'white';
+                hi.value = 'day';
+                
 
-    </style>
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    i = i + 1;
+                }
+            } else{
+                target.style.backgroundColor = 'white'; 
+                target.style.color = 'black';
+                hi.value = 'night'
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'black';
+                    i = i + 1;
+                    }   
+    
+                }
+        }
+    </script>
 </head>
 
 <body>
+
+    <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black'; 
+        document.querySelector('body').style.color = 'white';
+    ">
+
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white'; 
+    document.querySelector('body').style.color = 'black';
+    ">
+
+    <input id="nightdaya" type="button" value="night" onclick="
+        nightday(this);
+    ">
+       
+
+
     <h1><a href="index.html">WEB</a></h1>
     <h2><a href="https://developer.mozilla.org/ko/docs/Web/HTML" target="_blank"> html</a></h2>
-
+  
+<div id="list"> 
     <ol>
         <li><a href= "1.html" class="now">HTML</a></li>
         <li><a href= "2.html">CSS</a></li>
         <li><a href="3.html">javaScript</a></li>
     </ol>
-   <p> <li><strong>HTML(HyperText Markup Language)은 웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용합니다.</strong></p>
-    HTML 이외의 다른 기술은 일반적으로 웹 페이지의 모양/표현 (CSS), 또는 기능/동작 (JavaScript)을 설명하는 데 사용됩니다.
-    "Hypertext(하이퍼텍스트)"란 웹 페이지를 다른 페이지로 연결하는 링크를 말합니다.<br>
-    <p>링크는 웹의 근본적인 속성으로,
-    인터넷에 자료를 올리고 다른 사람이 만든 페이지로 링크함으로써 여러분도 월드 와이드 웹 세계의 능동적인 일원이 될 수 있습니다.</p>
-    HTML은 웹 브라우저에 표시되는 글과 이미지 등의 다양한 콘텐츠를 표시하기 위해 "마크업"을 사용합니다.
    
-    <p>HTML 마크업은 다양한 "요소"를 사용하는데, 요소에는 
-    <xmp>
-    <head>, <title>, <body>, <header>, <footer>, <article>, <section>, <p>, <div>, <span>, <img>, <aside>, <audio>,
-    <canvas>, <datalist>, <details>, <embed>, <nav>, <output>, <progress>, <video>, <ul>, <ol>, <li>    
-    </xmp>
-    등 많은 종류가 존재합니다.
-    HTML 요소는 "태그"를 사용해서 문서의 다른 텍스트와 구분합니다. 
-    </p>
-    <p>태그는 "<", 태그 이름, ">"로 이루어집니다. 태그 안의 요소 이름은 대소문자를 구분하지 않습니다.
-    즉, 대문자, 소문자, 아니면 섞어서도 작성할 수 있습니다. 예를 들어 <xmp><title>요소는 <Title>, </xmp> 그 외 기타 가능한 모든 방법으로 작성할 수 있습니다.
-    </li></p>
 
+    <div> 
+        
+        <p>
+            <li><strong>HTML(HyperText Markup Language)은 웹을 이루는 가장 기초적인 구성 요소로, 웹 콘텐츠의 의미와 구조를 정의할 때 사용합니다.</strong></p>
+            HTML 이외의 다른 기술은 일반적으로 웹 페이지의 모양/표현 (CSS), 또는 기능/동작 (JavaScript)을 설명하는 데 사용됩니다.
+            "Hypertext(하이퍼텍스트)"란 웹 페이지를 다른 페이지로 연결하는 링크를 말합니다.<br>
+            <p>링크는 웹의 근본적인 속성으로,
+            인터넷에 자료를 올리고 다른 사람이 만든 페이지로 링크함으로써 여러분도 월드 와이드 웹 세계의 능동적인 일원이 될 수 있습니다.</p>
+            HTML은 웹 브라우저에 표시되는 글과 이미지 등의 다양한 콘텐츠를 표시하기 위해 "마크업"을 사용합니다.
+            <p>HTML 마크업은 다양한 "요소"를 사용하는데, 요소에는 
+            <xmp>
+            <head>, <title>, <body>, <header>, <footer>, <article>, <section>, <p>, <div>, <span>, <img>, <aside>, <audio>,
+            <canvas>, <datalist>, <details>, <embed>, <nav>, <output>, <progress>, <video>, <ul>, <ol>, <li>    
+            </xmp>
+            등 많은 종류가 존재합니다.
+            HTML 요소는 "태그"를 사용해서 문서의 다른 텍스트와 구분합니다. 
+            </p>
+            <p>태그는 "<", 태그 이름, ">"로 이루어집니다. 태그 안의 요소 이름은 대소문자를 구분하지 않습니다.
+            즉, 대문자, 소문자, 아니면 섞어서도 작성할 수 있습니다. 예를 들어 <xmp><title>요소는 <Title>, </xmp> 그 외 기타 가능한 모든 방법으로 작성할 수 있습니다.
+            </li>    
+        </p>    
+    </div>
+</div> 
     
 </body>
 

@@ -1,0 +1,46 @@
+a{
+    text-decoration: none;
+
+}
+h1{           
+    font-size: 300%;
+    text-align: center; 
+    border-bottom: 2px solid black;
+    padding: 0px;
+    margin: auto;    
+    
+}
+h2{
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: 0;
+    width: 125px;
+    text-align: center;           
+    
+}
+#list ol{
+    border-right: 2px solid black;
+    margin: 0;
+    width: 100px;
+    padding: 10px;
+    margin-left: 5px;
+}
+.now{
+    color: red;
+}
+#list{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+
+}
+@media(max-width:800px){
+    #list{
+    display: block;      
+}
+#list ol{
+    border-right: none;
+}
+h2{
+    display: none;
+}
+}
