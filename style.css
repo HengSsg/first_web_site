@@ -1,46 +1,94 @@
-a{
-    text-decoration: none;
+:root {
+  color-scheme: light;
+  --bg: #f4f8ff;
+  --card: #ffffff;
+  --text: #1f2a44;
+  --accent: #2f6fff;
+  --accent-hover: #1f58d8;
+  --border: #d9e3f5;
+}
 
+* {
+  box-sizing: border-box;
 }
-h1{           
-    font-size: 300%;
-    text-align: center; 
-    border-bottom: 2px solid black;
-    padding: 0px;
-    margin: auto;    
-    
-}
-h2{
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    margin: 0;
-    width: 125px;
-    text-align: center;           
-    
-}
-#list ol{
-    border-right: 2px solid black;
-    margin: 0;
-    width: 100px;
-    padding: 10px;
-    margin-left: 5px;
-}
-.now{
-    color: red;
-}
-#list{
-    display: grid;
-    grid-template-columns: 150px 1fr;
 
+body {
+  margin: 0;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #eef5ff 0%, #f8fbff 100%);
+  min-height: 100vh;
 }
-@media(max-width:800px){
-    #list{
-    display: block;      
+
+.app {
+  width: min(760px, 92vw);
+  margin: 40px auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(36, 84, 174, 0.12);
 }
-#list ol{
-    border-right: none;
+
+h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
 }
-h2{
-    display: none;
+
+.controls {
+  margin: 24px 0;
 }
+
+button {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+#status {
+  margin-top: 12px;
+  color: #4b5f8a;
+}
+
+.result {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.weather-box {
+  background: #f7faff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+}
+
+#foods {
+  margin-top: 8px;
+  padding-left: 22px;
+}
+
+.reason {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-left: 4px solid var(--accent);
+  background: #f2f6ff;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 30px;
+  color: #7485ab;
 }

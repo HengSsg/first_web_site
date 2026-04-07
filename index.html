@@ -1,33 +1,40 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="ko">
 <head>
-    <title>WEB.HENGSGG-html</title>
-    <meta charset= "utf-8">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        h2{
-        border-right: none;
-        border-bottom: none;
-        width: 350px;
-        padding: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오늘 날씨엔 뭐 먹지?</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <main class="app">
+    <header>
+      <h1>🌤️ 오늘 날씨엔 뭐 먹지?</h1>
+      <p>현재 위치의 날씨를 기반으로 음식 메뉴를 추천해드려요.</p>
+    </header>
 
-    <h1><a href="index.html">WEB</a></h1>
+    <section class="controls">
+      <button id="weatherBtn">현재 날씨로 추천 받기</button>
+      <p id="status" aria-live="polite">버튼을 눌러 추천을 시작하세요.</p>
+    </section>
 
-    <h2>(웹 프로그래밍 기초 개념)</h2>
-    <h3>궁금한 것을 눌러보아요 :)</h3>
+    <section id="result" class="result hidden" aria-live="polite">
+      <h2>추천 결과</h2>
+      <div class="weather-box">
+        <p><strong>지역:</strong> <span id="location">-</span></p>
+        <p><strong>날씨:</strong> <span id="condition">-</span></p>
+        <p><strong>기온:</strong> <span id="temperature">-</span></p>
+      </div>
+      <h3>🍽️ 추천 음식</h3>
+      <ul id="foods"></ul>
+      <p id="reason" class="reason"></p>
+    </section>
 
-    <ol>
-        <li><strong><a href= "1.html">HTML</strong></a></li>
-        <li><strong><a href= "2.html">CSS</strong></a></li>
-        <li><strong><a href="3.html">javaScript</a></strong></li>
-     
-    </ol>
+    <footer>
+      <small>데이터: Open-Meteo API (무료, API 키 불필요)</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
 </body>
-
 </html>
