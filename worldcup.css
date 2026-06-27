@@ -1,0 +1,125 @@
+.card {
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+}
+
+.hint {
+  color: #4b5f8a;
+  font-size: 0.92rem;
+  margin: 4px 0 14px;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.team-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-field label {
+  font-size: 0.8rem;
+  color: #7485ab;
+}
+
+.team-field input {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 10px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.team-field input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.matches {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.match-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+  background: #f7faff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.match-label {
+  font-weight: 600;
+}
+
+.match-row select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #eef2fb;
+  color: var(--accent);
+  margin-left: 8px;
+}
+
+button.secondary:hover {
+  background: #e0e8f8;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 14px;
+}
+
+#resultTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+#resultTable th,
+#resultTable td {
+  border: 1px solid var(--border);
+  padding: 10px 8px;
+  text-align: center;
+}
+
+#resultTable th {
+  background: #f2f6ff;
+  color: #1f2a44;
+}
+
+#resultTable td.team-name {
+  text-align: left;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.badge.qualified { background: #e3f9ec; color: #137a3e; }
+.badge.eliminated { background: #fde8e8; color: #c0392b; }
+.badge.contest { background: #fff4e0; color: #b9770e; }
+
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }

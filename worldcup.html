@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>월드컵 16강 진출 경우의 수 계산기</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="worldcup.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>⚽ 월드컵 16강 진출 경우의 수</h1>
+      <p>한 조(4팀 풀리그)의 경기 결과를 입력하면, 남은 경기의 <strong>모든 경우의 수</strong>를 계산해
+        각 팀의 16강(상위 2팀) 진출 가능성을 알려드려요.</p>
+    </header>
+
+    <section class="card">
+      <h2>1. 조 편성 입력</h2>
+      <p class="hint">4팀의 이름을 입력하세요. (승점: 승 3 · 무 1 · 패 0)</p>
+      <div id="teams" class="teams-grid"></div>
+    </section>
+
+    <section class="card">
+      <h2>2. 경기 결과 입력</h2>
+      <p class="hint">치른 경기는 결과를 선택하고, 남은 경기는 <strong>미정</strong>으로 두세요.
+        미정 경기의 모든 조합을 시뮬레이션합니다.</p>
+      <div id="matches" class="matches"></div>
+    </section>
+
+    <section class="controls">
+      <button id="calcBtn">경우의 수 계산하기</button>
+      <button id="resetBtn" class="secondary">초기화</button>
+      <p id="status" aria-live="polite">팀 이름과 경기 결과를 입력한 뒤 계산하세요.</p>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <h2>📊 계산 결과</h2>
+      <p id="summary" class="reason"></p>
+      <div class="table-wrap">
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>팀</th>
+              <th>현재 승점</th>
+              <th>진출 확정</th>
+              <th>진출 가능</th>
+              <th>탈락</th>
+              <th>판정</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="hint">동점 시 순위는 <b>승점 → 승자승(상대전적)</b> 순으로 비교합니다.
+        승자승까지 같으면 골득실 등으로 갈리므로 "경합"으로 표시됩니다.</p>
+    </section>
+
+    <footer>
+      <small><a href="index.html">← 홈으로</a> · 4팀 풀리그 6경기 기준 경우의 수 시뮬레이터</small>
+    </footer>
+  </main>
+
+  <script src="worldcup.js"></script>
+</body>
+</html>
